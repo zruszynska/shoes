@@ -2,7 +2,7 @@ const setEditModal = (productNumber) => {
  
     const xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", `http://localhost:3000/shoe/${productNumber}`, false);
+    xhttp.open("GET", `/shoe/${productNumber}`, false);
     xhttp.send();
 
     const shoe = JSON.parse(xhttp.responseText);
@@ -22,13 +22,13 @@ const setEditModal = (productNumber) => {
     console.log(shoe);
 
     // setting up the action url for the shoe
-    document.getElementById('editForm').action = `http://localhost:3000/shoe/${productNumber}`;
+    document.getElementById('editForm').action = `/shoe/${productNumber}`;
 }
 
 const deleteshoe = (productNumber) => {
     const xhttp = new XMLHttpRequest();
 
-    xhttp.open("DELETE", `http://localhost:3000/shoe/${productNumber}`, false);
+    xhttp.open("DELETE", `/shoe/${productNumber}`, false);
     xhttp.send();
 
     location.reload();
@@ -37,7 +37,7 @@ const deleteshoe = (productNumber) => {
 const loadshoes = () => {
     const xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "http://localhost:3000/shoe", false);
+    xhttp.open("GET", "/shoe", false);
     xhttp.send();
     const shoes = JSON.parse(xhttp.responseText);
 
