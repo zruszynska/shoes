@@ -33,7 +33,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/', express.static('../client'));
+app.use('/', express.static('./client'));
 
 app.post('/shoe', (req, res) => {
     const shoe = req.body;
