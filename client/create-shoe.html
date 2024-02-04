@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buty</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <h1>Dodaj buty</h1>
+        <hr>
+
+        <form action="http://localhost:3000/shoe" method="POST">
+            <div class="form-group">
+                <label>Kod produktu</label>
+                <input type="number" class="form-control" name="productNumber">
+            </div>
+
+            <div class="form-group">
+                <label>Marka</label>
+                <input class="form-control" name="brand">
+            </div>
+
+            <div class="form-group">
+                <label>Rozmiar</label>
+                <input type="number" class="form-control" name="size">
+            </div>
+
+            <div class="form-group">
+                <label>Kolor</label>
+                <input class="form-control" name="color">
+            </div>
+
+            <div class="form-group">
+                <label>Typ buta</label>
+                <input class="form-control" name="shoeType">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Dodaj</button>
+        </form><br/>
+        <a href="index.html"><button class="btn btn-primary">Menu</button></a>
+    </div>
+</body>
+
+</html>
